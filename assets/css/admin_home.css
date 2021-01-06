@@ -1,0 +1,16 @@
+body {
+    background-color: lightblue;
+  }
+  admin_menu
+  {
+      background: #000;
+      height: 100px;
+          font-weight:bold;
+      text-align:center;
+      margin-top: 70px;
+  }
+  
+  table {
+    background: orange;
+  }
+  

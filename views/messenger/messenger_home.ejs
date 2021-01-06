@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messenger</title>
+    <meta charset="utf-8">
+    <% include ../common/link.ejs %>
+    <link rel="stylesheet" href="/css/admin_header.css">
+    <link rel="stylesheet" href="/css/messenger_home.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>Admin_Home</title>
+</head>
+<body>
+    <% include ../common/admin_header.ejs %>
+    <br><br><br><br><br>
+    <form method="POST" action="/messenger/<%= data.receiver_id %>">
+        <table border="0" cellspacing="0" align="center" width="100%">
+            <tr height="50px" width="100%" align="center">
+                <td>
+                    <b>Select To Send Message</b>
+                </td>
+                <td>
+                    <b>Sending Message To ID : <%= data.receiver_id %></b>
+                </td>
+            </tr>
+            <tr height="300px">
+                <td width="50%">
+                    <div class="friends">
+                        <div class="chatlogs">
+                            <table border="1" cellspacing="0" width="100%" align="center">
+                                    <tr height="50px" align="center" width="100%">
+                                        <td width="20%">
+                                            <b>ID</b>
+                                        </td>
+                                        <td width="80%">
+                                            <b>USER NAME</b>
+                                        </td>
+                                    </tr>
+                                <% for(var i=0; i < results1.length; i++){ %>
+                                    <tr height="50px" align="center" width="100%">
+                                        <td width="20%">
+                                            <h3><a href="/messenger/getMessage/<%=results1[i].id %>"><%= results1[i].id %></a></h3>	
+                                        </td>
+                                        <td width="80%">
+                                            <h3><a href="/messenger/getMessage/<%=results1[i].id %>"><%= results1[i].username %></a></h3>
+                                        </td>
+                                    </tr>
+                                <% } %>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+                <td width="50%">
+                    <div class="chatbox">
+                        <div class="chatlogs">
+                                <% for(var j=0; j < results2.length; j++) {%>
+                                <% if(results2[j].sender_id == 1){ %>
+                                    <div class="chat self">
+                                        <div class="user-photo"><img src="/images/myPic.png"></div>
+                                        <p class="chat-message"><%= results2[j].message %></p>
+                                    </div>
+                                <% }else{ %>
+                                    <div class="chat friend">
+                                        <div class="user-photo"><img src="/images/image2.jpg"></div>
+                                        <p class="chat-message"><%= results2[j].message %></p>
+                                    </div>
+                                <% } %>
+                        <% } %>
+                        </div>
+                        
+                
+                        <div class="chat-form">
+                            <textarea name="message"></textarea>
+                            <button type="submit">Send</button>
+                        </div>
+                    
+                    </div>
+                </td>
+            </tr>
+    
+        </table>
+    </form>
+    <br><br><br>
+    <% include ../common/footer.ejs %>
+</body>
+</html>

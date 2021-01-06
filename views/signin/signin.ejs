@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../common/link.ejs %>
+    <link rel="stylesheet" href="/css/signin.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <div class="text-center logo-center">
+        <a href="/home"><img src="images/black.png" width="360px;"></a>
+    </div>
+    <div class="center-div">
+        <div class="pull-left">
+            <font size="4"> 
+                <a href="/home"><span class="fa fa-home"></span></a>                    
+            </font>
+        </div>
+        <div class="text-center">
+            <a href="/signin"><font class="signin"><strong>SIGN IN</strong></font></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/signup"><font class="signup"><strong>SIGN UP</strong></font></a>
+            <hr class="signin-hr">
+        </div>
+        <hr>
+        <form method="POST" action="/signin">
+            <font class="" size="3" ><strong>Email</strong></font><hr class="hr-5px">         
+            <input class="input-sm signin-input" type="text" placeholder="example@gmail.com" name="email" required><hr class="hr-22px">
+            <font class="" size="3" ><strong>Password</strong></font><hr class="hr-5px">          
+            <input class="input-sm signin-input" type="password" placeholder="######" name="password" required><hr class="hr-22px">
+            <hr class="hr-22px">
+            <div class="text-center">
+                <button class="signin-button"><strong>Sign In</strong></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

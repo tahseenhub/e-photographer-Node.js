@@ -1,0 +1,121 @@
+.header{
+    /* position: fixed; */
+    height: 70px;
+    background: #f2f2f2;
+    box-shadow: 0px 1px rgba(0,0,0,0.2);
+  }
+  .mobile{
+      background: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 3px;
+  }
+  .logo{
+    width: 200px;
+    padding: 20px 30px;
+    cursor: pointer;
+  }
+  .mysearchbox
+{
+    width: 300px;
+    /* margin-top:3%; */
+    margin-left: 100px;  
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 10px; 
+    background-image: url("search.png");
+    background-position: 269px 6px; 
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:1055px) {
+    .mysearchbox{
+        width: 250px;
+        background-position: 219px 6px; 
+
+    }
+}
+.mysearchbox:focus
+{
+    /* border: 1px solid #000;
+    border-radius: 10px; */
+    /* border: none; */
+}
+  .menu{
+    float: right;
+    padding: 27px 30px; 
+  }
+  .menu a{
+    color: #000;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+  }
+  .show-menu-btn,.hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  .show-menu-btn{
+    float: right;
+  }
+  .show-menu-btn i{
+    padding: 20px 30px;
+  }
+  .menu a:hover,
+  .show-menu-btn:hover,
+  .hide-menu-btn:hover{
+    color: #3498db;
+  }
+  
+  #chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111
+  }
+  
+  @media screen and (max-width:1075px) {
+    .show-menu-btn,.hide-menu-btn{
+      display: block;
+    }
+    .menu{
+      position: fixed;
+      width: 250px;
+      height: 245px;;
+      background: rgba(0,0,0,0.7);
+      right: -100%;
+      top: 0;
+      text-align: left;
+      padding: 60px 0px;
+      line-height: normal;
+      transition: 0.7s;
+      border-radius: 0 0 0 5px;
+      z-index: 1;
+    }
+    .menu a{
+      display: block;
+      padding: 20px;
+      color: #f2f2f2;
+    }
+    .mobile{
+        background: #fff;
+        color: #000000;
+        padding: 10px 20px;
+        border-radius: 3px;
+    }
+    .hide-menu-btn{
+      position: absolute;
+      top: 18px;
+      right: 30px;
+      color: #fff;
+    }
+    #chk:checked ~ .menu{
+      right: 0;
+    }
+  }
+  
+.img-circle{
+    /* margin: 10px 0 0 0; */
+    width: 30px;
+    border-radius: 50%;
+}

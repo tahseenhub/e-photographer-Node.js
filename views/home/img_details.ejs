@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../common/link.ejs %>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/image_details.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>Image details</title>
+</head>
+<body>
+    <% include ../common/header.ejs %>
+    <div class="image-details-1">
+            <div class="container">
+                <div class="owner-details">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/images/<%= owner_info[0].img %>" width="70px" height="60px">
+                            </td>
+                            <td>
+                                <font><strong>&nbsp;&nbsp;&nbsp;<%= owner_info[0].name %></strong></font><br>
+                                <font class="greyfont">&nbsp;&nbsp;&nbsp;<%= owner_info[0].tagline %></font>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="image-div">
+                    <img src="/images/<%= image[0].img_name %>" class="img-responsive">
+                </div>
+                <div class="image-details-icon">
+                    <div class="pull-left">
+                        <button class="btn btn-default fa fa-eye">&nbsp;&nbsp;2.5M</button>
+                        <button class="btn btn-default fa fa-comment">&nbsp;&nbsp;2.5M</button>
+                        <a href="/home/signinCheck"><button class="btn btn-default fa fa-thumbs-o-up">&nbsp;&nbsp;2.5M</button></a>
+                        <a href="/home/signinCheck"><button class="btn btn-default fa fa-bookmark-o">&nbsp;&nbsp;2.5M</button></a>
+                        <a href="/home/signinCheck"><button class="btn btn-default fa fa-share">&nbsp;&nbsp;2.5M</button></a>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-danger fa fa-camera">&nbsp;&nbsp;Canon 700D</button>
+                        <a href="/home/signinCheck"><button class="btn btn-success fa fa-cart-plus">&nbsp;&nbsp;Add to Cart</button></a>
+                    </div>
+                </div>
+                <br>
+                <hr>
+            </div>
+            
+        </div>
+        <div class="image-details-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <font size="5"><strong>Comments<hr></strong></font>
+                        <div class="comments">
+                             <font color=#0000FF><strong>see previous comments.....</strong></font><br>
+                            <hr class="comment-hr">
+                            <div class="comment-1">
+                                <img src="/images/1.png" width="70px" height="60px" class="pull-left">
+                                <font><strong>&nbsp;&nbsp;&nbsp;Ismail Hosen</strong></font><br>
+                                <font class="greyfont">&nbsp;&nbsp;&nbsp;Professional Photographer</font><br>
+                                <font><strong>&nbsp;&nbsp;&nbsp;... Nice shot sjdhgs skjdgf kjsdgf jshgdfxcvxcvx xcvxcv xcv</strong></font><br>
+                            </div>
+                            <hr class="comment-hr">
+                            <div class="comment-1">
+                                <img src="/images/1.png" width="70px" height="60px" class="pull-left">
+                                <font><strong>&nbsp;&nbsp;&nbsp;Ismail Hosen</strong></font><br>
+                                <font class="greyfont">&nbsp;&nbsp;&nbsp;Professional Photographer</font><br>
+                                <font><strong>&nbsp;&nbsp;&nbsp;... Nice shot sjdhgs skjdgf kjsdgf jshgdfxcvxcvx xcvxcv xcv</strong></font><br>
+                            </div>
+                            <hr class="comment-hr">
+                            <div class="comment-1">
+                                <img src="/images/1.png" width="70px" height="60px" class="pull-left">
+                                <font><strong>&nbsp;&nbsp;&nbsp;Ismail Hosen</strong></font><br>
+                                <font class="greyfont">&nbsp;&nbsp;&nbsp;Professional Photographer</font><br>
+                                <font><strong>&nbsp;&nbsp;&nbsp;... Nice shot sjdhgs skjdgf kjsdgf jshgdfxcvxcvx xcvxcv xcv</strong></font><br>
+                            </div>
+                            <hr class="comment-hr">
+                            <div class="comment-1">
+                                <img src="/images/1.png" width="70px" height="60px" class="pull-left">
+                                <font><strong>&nbsp;&nbsp;&nbsp;Ismail Hosen</strong></font><br>
+                                <font class="greyfont">&nbsp;&nbsp;&nbsp;Professional Photographer</font><br>
+                                <font><strong>&nbsp;&nbsp;&nbsp;... Nice shot sjdhgs skjdgf kjsdgf jshgdfxcvxcvx xcvxcv xcv</strong></font><br>
+                            </div>
+                            <hr class="comment-hr">
+                            <div class="comment-1">
+                                <img src="/images/1.png" width="70px" height="60px" class="pull-left">
+                                <font><strong>&nbsp;&nbsp;&nbsp;Ismail Hosen</strong></font><br>
+                                <font class="greyfont">&nbsp;&nbsp;&nbsp;Professional Photographer</font><br>
+                                <font><strong>&nbsp;&nbsp;&nbsp;... Nice shot sjdhgs skjdgf kjsdgf jshgdfxcvxcvx xcvxcv xcv</strong></font><br>
+                            </div>
+                            <hr class="comment-hr">
+                            <div class="colo-lg-12">
+                                <textarea class="input-sm" placeholder="Enter Your Comment"></textarea><hr class="without-border-10px">
+                                <a href="/home/signinCheck"><button class="fa fa-send btn btn-success"></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                        <font size="5"><strong>Siniliar Photos<hr></strong></font>
+                        <div class="similiar-images">
+                            <div class="row">
+                                <% for(var i=0; i < all_image.length; i++){ %>
+                                    <div class="col-lg-4 similiar-img">
+                                        <a href="/image_details/<%= all_image[i].id %>/<%= category %>"><img class="img-responsive myimg" src="/images/<%= all_image[i].img_name %>"></a>
+                                    </div>
+                                <% } %>
+                                <div class="col-lg-12">
+                                    <button style="width:100%" class="btn btn-default fa fa-load">Load more similiar images...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <hr><hr><hr>
+    <% include ../common/footer.ejs %>
+
+</body>

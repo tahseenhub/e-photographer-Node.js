@@ -1,0 +1,20 @@
+<header>
+        <div class="header navbar-fixed-top">
+            <!-- <h2 class="logo">DarkCode</h2> -->
+            <a href="/client"><img class="logo" src="/images/white.png"></a>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-menu-btn">
+            <i class="fa fa-bars"></i>
+            </label>
+            <ul class="menu">
+            <a href="/admin/profile"><img class="img-circle" src="/images/<%= user_info.img %>">&nbsp;&nbsp;&nbsp;<%= user_info.username %></a>
+            <a href="/admin"><span class="">Manage</span></a>
+            <a href="/admin"><span class="fa fa-home"></span></a>
+            <a href="/admin"><span class="fa fa-bell-o">&nbsp;<span class="badge"></span></span></a>
+            <a href="/signout"><span class="fa fa-sign-out"></span></a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            </ul>
+        </div>
+    </header>

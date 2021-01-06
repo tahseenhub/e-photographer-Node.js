@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../common/link.ejs %>
+    <link rel="stylesheet" href="/css/user_header.css">
+    <link rel="stylesheet" href="/css/user_profile.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title><%= user_info.name %></title>
+</head>
+<body>
+    <% include ../common/user_header.ejs %>
+        <img class="slider-img" src="/images/signinbg.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 ">
+                    <img class="img-responsive user_profile_img" src="/images/<%= user_info.img %>">
+                    <hr class="text-desing-hr">
+                    <div class="text-div">
+                        <span style="font-size: 23px; font-weight: bolder; 
+                        text-transform: uppercase"><%= user_info.name %></span><br>
+                        <% if(user_info.tagline != ''){ %>
+                            <span class="">&nbsp; <%= user_info.tagline %></span><br><hr class="text-desing-hr">
+                        <% }else{ %>
+                            <span onclick="clickEdit()" class='if-else-css'>click to add your tagline</span> <hr class="text-desing-hr">
+                        <% } %>
+                        <span class="fa fa-map-marker">&nbsp;&nbsp;&nbsp; Kuril, Dhaka-1229</span><br>
+                        <span class="fa fa-envelope">&nbsp; <%= user_info.email %></span><br>
+                        <% if(user_info.facebook != ''){ %>
+                            <span class="fa fa-facebook-square">&nbsp; <%= user_info.facebook %></span><br>
+                        <% }else{ %>
+                            <span onclick="clickEdit()" class='fa fa-facebook-square if-else-css'>&nbsp;&nbsp;&nbsp;click to add your facebook</span>
+                        <% } %>
+                        <% if(user_info.instagram != ''){ %>
+                            <span class="fa fa-facebook-square">&nbsp; <%= user_info.instagram %></span><br>
+                        <% }else{ %>
+                            <span onclick="clickEdit()" class='fa fa-instagram if-else-css'>&nbsp;&nbsp;&nbsp;click to add your instagram</span>
+                        <% } %>
+                        
+                    </div>   
+                </div> 
+            </div>
+        </div>
+        <div class='modal  fade in' id="loading" hidden style="position:absolute; min-height:500px">
+                <img style="position: absolute;
+                    top: 20%;
+                    left: 50%;
+                    margin-top: -50px;
+                    margin-left: -50px;"
+                    alt="" src="/images/loading.gif"
+                />
+            </div>
+        <div class="container" id="main-contents">
+            <div class="row">
+                <hr class="hr-20px">
+                <div class="phtos profile-gallery-div" id="recommend-text" onclick="clickPhotos()">
+                    <button class="profile-btn photos-btn btn-active">Photos</button>
+                    <hr class="recommend-hr">                        
+                </div>
+                <div class="projects profile-gallery-div" id="wedding-text" onclick="clickProjects()">
+                        <button class="profile-btn btn-inactive">Projects</button>  
+                    </div>
+                    <div class="events profile-gallery-div" id="wildlife-text" onclick="clickEvents()">
+                        <button class="profile-btn btn-inactive">Events</button>
+                    </div>
+                    <div class="overview profile-gallery-div" id="wildlife-text" onclick="clickOverview()">
+                        <button class="profile-btn btn-inactive">Overview</button>
+                    </div>
+                <div class="about profile-gallery-div" id="wildlife-text"            onclick="clickEdit()">
+                    <button class="profile-btn update-btn btn-inactive">Update Profile</button>
+                </div>
+            </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <img src="/images/add-image.png" alt="Mountains" width="600" height="400" onclick="mymodal()">
+                        <div class="desc">Click to add Image</span></div>
+                    </div>
+                </div> 
+                <% for(var i=0; i< all_image.length; i++){ %>
+                    <!-- kasdakjsd -->
+                    <div class="responsive">
+                        <div class="gallery">
+                            <a target="_blank" href="/images/<%= all_image[i][0].img_name %>">
+                            <img src="/images/<%= all_image[i][0].img_name %>" alt="Northern Lights" width="600" height="400">
+                            </a>
+                            <div class="desc"><span class="fa fa-heart">&nbsp;&nbsp;4k</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-eye">&nbsp;&nbsp;1k</span></div>
+                        </div>
+                    </div>
+                <% } %>
+                          
+        </div>
+
+        <div id="id01" class="modal">
+  
+            <form class="modal-content animate" method="POST" action="/user">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="/images/<%= user_info.img %>" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container">
+                <span style="color: red;">*Selecet a category: </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select class="input-sm" name="category">
+                    <option value="wedding_photos">Wedding</option>
+                    <option value="wildlife_photos">Wildlife</option>
+                    <option value="sports_photos">Sports</option>
+                    <option value="fashion_photos">Fashion</option>
+                    <option value="architecture_photos">Architecture</option>
+                </select>
+                <input type="file" name="img" class="input-sm">
+                <textarea class="input-sm" placeholder="Photos description..." required name="description"></textarea>
+                <hr class="without-border-10px">
+                <input type="submit" class="btn btn-success" value="Upload">
+              </div>
+          
+              
+            </form>
+          </div>
+          <!-- <hr><hr><hr> -->
+
+        
+
+    <% include ../common/footer.ejs %>
+    <script src="/js/user_profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+        <div class="recommend-div gallery-div" id="recommend-text" onclick="fetchData('recommend_photos')">
+            <button class=" btn-active">Recommend Photos</button>
+            <% if(category=='recommend_photos'){ %>
+                <hr class="recommend-hr">
+            <%}%>                     
+        </div>
+        <div class="wedding-div gallery-div" id="wedding-text" onclick="fetchData('wedding_photos')">
+            <button class=" btn-active">Wedding Photos</button>
+            <% if(category=='wedding_photos'){ %>
+                <hr class="wedding-hr">
+            <%}%>
+
+        </div>
+        <div class="wildlife-div gallery-div" id="wildlife-text" onclick="fetchData('wildlife_photos')">
+            <button class=" btn-active">Wild-Life Photos</button>
+            <% if(category=='wildlife_photos'){ %>
+                <hr class="wildlife-hr">
+            <%}%>                        
+        </div>
+        <div class="fashion-div gallery-div" id="fashion-text" onclick="fetchData('fashion_photos')">
+            <button class=" btn-active">Fashion Photos</button>
+            <% if(category=='fashion_photos'){ %>
+                <hr class="fashion-hr">
+            <%}%>                        
+        </div>
+        <div class="sports-div gallery-div" id="sports" onclick="fetchData('sports_photos')">
+            <button class=" btn-active">Sports Photos</button>
+            <% if(category=='sports_photos'){ %>
+                <hr class="sports-hr">
+            <%}%>                       
+        </div>
+        <div class="architect-div gallery-div" id="architect" onclick="fetchData('architecture_photos')">
+            <button class=" btn-active">Architecture Photos</button>
+            <% if(category=='architecture_photos'){ %>
+                <hr class="archi-hr">
+            <%}%>                       
+        </div>
+        <div class="historic-div gallery-div">
+            <button class=" btn-active">Historic Photos</button>
+            <hr class="historic-border-bottom">                        
+        </div>
+        <br>
+        <br>
+        <hr>
+    <div class="row" id="">
+        <% for(var i=0; i < all_image.length; i++){ %>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-sm-6 img-div">
+            <a href="image_details/<%= all_image[i].id %>/<%= category %>"><img class="myimg img-responsive" src="images/<%= all_image[i].img_name %>" alt=""></a>
+            <hr class="without-border-5px">
+            <button class="btn btn-default fa fa-eye">&nbsp;1000</button>
+            <button class="btn btn-default fa fa-comment">&nbsp;1000</button>
+            <hr class="without-border-10px">
+            <button class="btn btn-default fa fa-bookmark-o"></button>
+            <button class="btn btn-default fa fa-cart-plus"></button>
+            <button class="btn btn-default fa fa-share"></button>
+        </div>
+        <% } %>
+    </div>

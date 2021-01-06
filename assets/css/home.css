@@ -1,0 +1,241 @@
+.slider{
+    margin-top:75px; 
+}
+.myslides
+{
+    margin-top: 153px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+.slideshow-container
+{
+    width: 100%;
+    /* max-width:2000px;     */
+    position: relative;
+    margin:auto;
+}
+
+.text
+{
+    color:#f2f2f2;
+    font-size:15px;
+    padding:8px 12px;
+    position:absolute;
+    bottom: 8px;
+    width:100%;
+    text-align:center;
+}
+.numbertext
+{
+    color: #f2f2f2;
+    font-size:12px;
+    padding:8px 12px;
+    position:absolute;
+    top:0;
+}
+
+.fade
+{
+    -webkit-animation-name:fade;
+    -webkit-animation-duration:1.5s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@-webkit-keyframes fade
+{
+    from{opacity: 1}
+    to {opacity: 1}
+}
+@media only screen and (max-width:300px)
+{
+    .prev, .next, .text{font-size: 11px}
+}
+.without-border-upper-slider-hr
+{
+    border: none;
+}
+.slider-content
+{
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 33%;
+    
+}
+.freelance-btn
+{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: blue;
+    color: #fff;
+}
+.freelance-btn:hover
+{
+    background: #fff;
+    color: blue;
+    border: 1px solid blue;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+.hire-btn
+{
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    background: #fff;
+    color: blue;
+}
+.hire-btn:hover
+{
+    background: blue;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+.myblue
+{
+    color: blue;
+}
+.stock-photos
+{
+    margin: 20px 0 0px 0;
+}
+
+.btn-active
+{
+    border: none;
+    background: none;
+    
+}
+            .recommend-hr
+            {   
+                width: 138px;
+                border: none;
+                margin:10px 0 0px 0; 
+                border-bottom: 3px solid green;  
+            }
+            .wedding-hr
+            {
+                width: 112px;
+                border: none;
+                margin:10px 0 0px 0; 
+                border-bottom: 3px solid green;
+            }
+            .wildlife-hr
+            {
+                width: 112px;
+                border: none;
+                margin:10px 0 0px 0; 
+                border-bottom: 3px solid green;
+            }
+            .fashion-hr
+            {
+                width: 110px;
+                border: none;
+                margin:10px 0 0px 0; 
+                border-bottom: 3px solid green;
+            }
+            .sports-hr
+            {
+                width: 101px;
+                border: none;
+                margin:10px 0 0px 0; 
+                border-bottom: 3px solid green;
+            }
+            .archi-hr
+            {
+                width: 135px;
+                border: none;
+                margin:10px 0 0px 0; 
+                border-bottom: 3px solid green;
+            }
+            .historic-border-bottom
+            {   
+                width: 108px;
+                border: none;
+                margin:10px 0 0px 0; 
+                border-bottom: 3px solid green;
+                display: none;
+            }
+            #wedding-photos{
+                display: none;
+            }
+            /* .img-details
+            {
+                display: inline;
+                height: 100px;
+                background: #000;
+            } */
+            .img-div img
+            {
+                cursor: pointer;
+            }
+            .img-div
+            {
+                border: 1px solid green;
+                width: 270px;
+                padding: 20px 35px;
+                margin:0 20px 20px 0; 
+            }
+            .img-div:hover
+            {
+                /* border: none; */
+                border-radius: 5px;
+                background: #000;
+                transition: all .1s ease-in-out; 
+            }
+            .myimg
+            {
+                width: 300px;
+                margin: 0 0 20px 0;
+                height: 150px;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .btn-default:hover
+            {
+                border: none;
+                background: green;
+                color: #fff;
+            }
+            .gallery-div
+            {
+                float: left;
+                margin: 0px 30px 0 0;
+
+            }
+            .recommend-div
+            {
+            }
+            /*  */
+            .step-hire-freelancer
+            {
+                margin: 0px 0 0px 0;
+                background:#F7F5F5;
+                padding: 30px;
+            }
+            .step-hire-freelancer-text
+            {
+                margin-left:63px; 
+            }
+            .mydivstep
+            {
+                float: left;
+                width: 200px;
+                /* text-align: center;  */
+            }
+            .vertical-div
+            {
+                background: #000;
+                height: 140px;
+                width: 3px;
+            }
+            .how-to-hr
+            {
+                margin: 10px 0 35px 525px;
+                width: 90px;
+                height: 3px;
+                background: green;
+                
+            }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../common/link.ejs %>
+    <link rel="stylesheet" href="/css/client_header.css">
+    <link rel="stylesheet" href="/css/client_profile.css">    
+    <link rel="stylesheet" href="/css/footer.css">
+    <title><%= user_info.name %></title>
+</head>
+<body>
+    <% include ../common/client_header.ejs %>
+    <img class="slider-img" src="/images/signinbg.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 ">
+                    <img class="img-responsive user_profile_img" src="/images/<%= user_info.img %>">
+                    <!-- <hr class="text-desing-hr"> -->
+                    <div class="text-div">
+                        <span style="font-size: 23px; font-weight: bolder; 
+                        text-transform: uppercase"><%= user_info.name %></span><br>
+                        <span class="fa fa-map-marker">&nbsp; Kuril, Dhaka-1229</span><br>
+                        <span class="fa fa-facebook-square">&nbsp; /ismhosen</span><br>
+                        <span class="fa fa-envelope">&nbsp; ismhosen@gmail.com</span><br>
+                    </div>   
+                </div> 
+            </div>
+        </div>
+    <% include ../common/footer.ejs %>

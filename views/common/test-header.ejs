@@ -1,0 +1,70 @@
+.signupin
+{
+    margin-top:10px; 
+    padding: 15px 30px;
+    color: #000;
+    
+}
+.mynavbar:hover
+{
+    text-decoration: none;
+    color: #000;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;	
+    
+}
+
+.job-bg
+{
+    background: #000;
+    padding: 10px 30px;
+    border-radius: 10px;
+    /* height: 30px; */
+}
+.mysearchbox
+{
+    width: 300px;
+    margin-top:3%;
+    margin-left: 200px;  
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 10px; 
+    background-image: url("search.png");
+    background-position: 269px 6px; 
+    background-repeat: no-repeat;
+}
+.mysearchbox:focus
+{
+    /* border: 1px solid #000;
+    border-radius: 10px; */
+    /* border: none; */
+}
+
+<header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="fa fa-bars"></span>	
+                    </button>
+                    <a href="/home" class="navbar-brand">
+                        <img src="/images/black.png" width="140px;">
+                    </a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <div class=container>
+                        <ul class="nav navbar-nav navbar-left">
+                            <input type="text" class="mysearchbox input-sm" placeholder="search your keyword...">
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <a class="signupin navbar-right" href="/signin"><font class="mynavbar" color="#fff"><span class="job-bg">Post a Job</span></font></a>
+                            <a class="signupin navbar-right" href="/signup"><font class="mynavbar">SIGN UP</font></a>
+                            <a class="signupin navbar-right" href="/signin"><font class="mynavbar">SIGN IN</font></a>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>

@@ -1,0 +1,107 @@
+body
+{
+    background-image: url("signinbg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+html
+{
+    height: 100%;
+}
+.logo-center
+{
+    margin: 70px 0 0 0;
+}
+.center-div
+{
+    position: absolute;
+    width: 500px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -190px 0 0 -250px;
+    background: #ffffff;
+    padding: 25px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 204, .3);
+    box-shadow: 0 0 10px rgba(0, 0, 204, .7);
+}
+.signup
+{
+    color: green;
+}
+.signup-hr
+{
+    margin: 5px 0 5px 0;
+    border:1px solid green;
+    width: 60px;
+    position: absolute;
+    left: 265px;
+}
+.hr-5px
+{
+    margin: 0px 0 5px 0;
+    border: none;
+}
+.hr-22px
+{
+    margin: 11px 0 11px 0;
+    border: none;
+}
+.signin-input
+{
+    width: 100%;
+    border: 1px solid blue;
+}
+.work-button
+{
+    margin: 0 20px 0 0;
+}
+.active
+{
+    background: green;
+}
+.work-button,.hire-button
+{
+    width: 210px;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+}
+.work-button
+{
+    background: black;
+}
+.create-button
+{
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+}
+.gmail-button
+{
+    width: 210px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+}
+.fb-button
+{
+    width: 210px;
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+}
+.hr-or
+{
+    border: none;
+    margin: 4px 0 4px 0;
+}
+.hr-20px
+{
+    border: none;
+    margin: 10px 0 10px 0;
+}
